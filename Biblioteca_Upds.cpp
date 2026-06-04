@@ -9,6 +9,8 @@
 #define AMARILLO "\033[33m"
 #define AZUL    "\033[34m"
 #define CYAN    "\033[36m"
+#define CELESTE    "\033[94m"
+
 
     using namespace std;
     
@@ -37,19 +39,24 @@
 void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,vector<string> &codigo_prog,vector<int> &cantidad_prog,vector <bool> &presti_IS,
                           vector<string> &title_de,  vector<string> &autor_de,  vector<string> &codigo_de,  vector<int> &cantidad_de,vector  <bool> &presti_DE,
                           vector<string> &title_me,  vector<string> &autor_me,  vector<string> &codigo_me,  vector<int> &cantidad_me,vector  <bool> &presti_ME,int pos){
-	
-	    cout << "Elija Categoria que desea elegir......."<<endl;
-	    cout<<"1) Programacion "<<endl;
-	    cout<<"2) Derecho"<<endl;
-	    cout<<"3) Medicina"<<endl;
-	    cout<<"4) Salir"<<endl;
+
+    cout <<CYAN<< "     ╔═════════════════════════════════════╗" << endl;
+    cout <<CYAN<< "     ║              CATEGORIAS             ║" << endl;
+    cout <<CYAN<< "     ╠═════════════════════════════════════╣" << endl;
+    cout <<CYAN<< "     ║           1) Programacion           ║" << endl;
+    cout <<CYAN<< "     ║           2) Derecho                ║" << endl;
+    cout <<CYAN<< "     ║           3) Medicina               ║" << endl;
+    cout <<CYAN<< "     ║          *4) Salir                  ║" << endl;
+    cout <<CYAN<< "     ╚═════════════════════════════════════╝" << endl;
+        cout <<AMARILLO<< " Elija Categoria que desea elegir......."<<endl;
+        cout << "   Opcion: ";
 	    int libroElegido;
 	    int opcion;
 	   cin>>opcion; 
 	        switch (opcion){
 	            
 	            case 1:
-	          cout<<"<><><><><> Eligio la categoria de Programacion <><><><>"<<endl;
+	          cout<<VERDE<<"       <><><><><> Eligio la categoria de Programacion <><><><>"<<endl;
 	            cout<<endl;
                                                           
             cout << AZUL;
@@ -73,7 +80,7 @@ void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,
             cout << "                            :*######*:                                  " << endl;
             cout << "                                --                                      " << endl;                                        
 
-	            cout<<"Que libro de sea pedir prestado????"<<endl;
+	            cout<<AMARILLO<<"Que libro de sea pedir prestado????"<<endl;
                   cout << endl;
                   
 					system("chcp 65001 > nul");
@@ -126,20 +133,21 @@ void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,
     archivo << "                        --------------------------------------------" << endl;
     archivo << "*****************************  Boleta de registro del Prestamo  **********************" << endl;
     archivo << "    ╔═══════════════════════════════════════════════════════════════════╗" << endl;
-    archivo << "    ║                      LIBROS DE PROGRAMACION                       ║" << endl;
+    archivo << "    ║                            DATOS DEl LIBRO                        ║" << endl;
     archivo << "    ╠═════╗═════════════════════════════════════════════════════════════╣" << endl;
     archivo << "    ║ N°"<<libroElegido<<" ║    Titulo: "<<title_prog [libroElegido] <<"           " << endl;
     archivo << "    ║═════╝    Autor: "<<autor_prog [libroElegido]<<"             " << endl;
     archivo << "    ║          Codigo: "<<codigo_prog [libroElegido]<<"                                       ║" << endl;
     archivo << "    ╚═══════════════════════════════════════════════════════════════════╝" << endl;
-
+    archivo << "    Nota: Recuerde que para su devolucion debe tener su boleta de registro del pretamo"<<endl;
+    archivo << "          para su devolucion ya que se le pedira el codigo del libro."<<endl;
     archivo.close(); 
     
     cout << "Datos escritos correctamente." << endl;
 
-             cout <<VERDE<< "╔════════════════════════════════════════════════════════════════════╗" << endl;
-             cout <<VERDE<< "║ "<<AMARILLO<<"  Copias restantes de este libro: " <<CYAN<< cantidad_prog[libroElegido]<<AMARILLO<<"                    ║" << endl;
-             cout <<VERDE<< "╚════════════════════════════════════════════════════════════════════╝" << endl;
+             cout <<VERDE<< "╔══════════════════════════════════════════════════════════╗" << endl;
+             cout <<VERDE<< "║ "<<AMARILLO<<"  Copias restantes de este libro: " <<CYAN<< cantidad_prog[libroElegido]<<VERDE<<"            ║" << endl;
+             cout <<VERDE<< "╚══════════════════════════════════════════════════════════╝" << endl;
       
         
     } else {
@@ -177,11 +185,10 @@ void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,
             cout << " :                      .@@@@@@@@@@@@@:                           " << endl;
             cout << " -                       :::::--------.                           " << endl;
             cout << endl;
-	            	cout<<AMARILLO<<"Que libro de sea pedir prestado?"<<endl;
                   
 	          	for (size_t i=0; i<title_de.size();i++){
 		       
-                    cout <<CYAN<< "╔═══════════════════════════════════════════════════════════════════╗" << endl;
+    cout <<CYAN<< "╔═══════════════════════════════════════════════════════════════════╗" << endl;
     cout <<CYAN<< "║                      LIBROS DE DERECHO                          ║" << endl;
     cout <<CYAN<< "╠═════╗═════════════════════════════════════════════════════════════╣" << endl;
     cout <<CYAN<< "║ N°"<<i<<" ║    Titulo: "<<title_de [i] <<"           " << endl;
@@ -189,9 +196,9 @@ void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,
     cout <<CYAN<< "║          Codigo: "<<codigo_de [i]<<"                                       ║" << endl;
     cout <<CYAN<< "║          Cantidad de ejemplares Disponibles: "<<cantidad_de [i]<<"                    ║" << endl;
     cout <<CYAN<< "╚═══════════════════════════════════════════════════════════════════╝" << endl;
-				
+	
 	          	}
-	          	   
+	        
     cout <<VERDE<< "   ############################################################################"<<endl;
     cout <<VERDE<< "   ## Seleccione por favor el numero (N°) del libro que desea pedir prestado: ";
     cin >> libroElegido;
@@ -209,6 +216,36 @@ void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,
         cout<<"█     █   █ █████ ████    █   █   █ █   █  ███     █████ █   █ ███   █    ███  ████   ███"<<endl;
         cout<<""<<endl;
         cout<<""<<endl;
+
+        //Aqui se va atrabajar en la generacion del archivo
+        ofstream archivo; // Objeto para escribir
+    
+    archivo.open("DatosPrestamoD.txt", ios::out); // Crear/abrir archivo en modo escritura
+    
+    if (archivo.fail()) {
+        cout << "Error al abrir el archivo" << endl;
+        //return 0;
+    }
+    
+    archivo <<VERDE <<"                        --------------------------------------------" << endl;
+    archivo << "                           |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |" << endl;
+    archivo << "                        --------------------------------------------" << endl;
+    archivo << "    *****************************  Boleta de registro del Prestamo  **********************" << endl;
+    archivo << "         ╔═══════════════════════════════════════════════════════════════════╗" << endl;
+    archivo << "         ║                      LIBROS DE PROGRAMACION                       ║" << endl;
+    archivo << "         ╠═════╗═════════════════════════════════════════════════════════════╣" << endl;
+    archivo << "         ║ N°"<<libroElegido<<" ║    Titulo: "<<title_de [libroElegido] <<"           " << endl;
+    archivo << "         ║═════╝    Autor: "<<autor_de [libroElegido]<<"             " << endl;
+    archivo << "         ║          Codigo: "<<codigo_de [libroElegido]<<"                                       ║" << endl;
+    archivo << "         ╚═══════════════════════════════════════════════════════════════════╝" << endl;
+    archivo << "    Nota: Recuerde que para su devolucion debe tener su boleta de registro del pretamo"<<endl;
+    archivo << "          para su devolucion ya que se le pedira el codigo del libro."<<endl;
+
+    archivo.close(); 
+    cout << AMARILLO<<"       ::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;
+    cout << "     Datos escritos correctamente." << endl;
+    cout << "       ::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;
+
              cout <<VERDE<< "╔════════════════════════════════════════════════════════════════════╗" << endl;
              cout <<VERDE<< "║ "<<AMARILLO<<"  Copias restantes de este libro: " <<CYAN<< cantidad_de[libroElegido]<<AMARILLO<<"                    ║" << endl;
              cout <<VERDE<< "╚════════════════════════════════════════════════════════════════════╝" << endl;
@@ -221,7 +258,7 @@ void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,
 	            break;
 	            
 	            case 3:
-	                cout<<"Eligio la categoria de Medicina"<<endl;
+	                cout<<AMARILLO<<" &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Eligio la categoria de Medicina &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"<<endl;
             cout << VERDE;
             cout << "                         =@@@@=                        " << endl;
             cout << "                         #@@@@#                        " << endl;
@@ -254,14 +291,19 @@ void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,
                     cout << endl;
 		            cout<<"Que libro de sea pedir prestado?"<<endl;       
                 	cout << endl;            
-	          	for (size_t i=0; i<title_me.size();i++){
-				cout<<"Numero: "<<i<<endl;
-				cout<<"titulo " << title_me [i]<<endl;
-				cout<<"autor " << autor_me [i]<<endl;
-				//cout<<"cantidad " << cant [i]<<endl;
-				cout<<"codigo " << codigo_me [i]<<endl;
+          for (size_t i=0; i<title_me.size();i++){
+
+    cout <<CYAN<< "╔═══════════════════════════════════════════════════════════════════╗" << endl;
+    cout <<CYAN<< "║                      LIBROS DE MEDICINA                         ║" << endl;
+    cout <<CYAN<< "╠═════╗═════════════════════════════════════════════════════════════╣" << endl;
+    cout <<CYAN<< "║ N°"<<i<<" ║    Titulo: "<<title_me [i] <<"           " << endl;
+    cout <<CYAN<< "║═════╝    Autor: "<<autor_me [i]<<"             " << endl;
+    cout <<CYAN<< "║          Codigo: "<<codigo_me [i]<<"                                       ║" << endl;
+    cout <<CYAN<< "║          Cantidad de ejemplares Disponibles: "<<cantidad_me [i]<<"                    ║" << endl;
+    cout <<CYAN<< "╚═══════════════════════════════════════════════════════════════════╝" << endl;
+	
 	          	}
-    cout << "Ingrese el numero de indice del libro que desea prestar: ";
+    cout <<VERDE <<"Ingrese el numero de indice del libro que desea prestar: ";
     cin >> libroElegido;
     
     // Control de ejemplares
@@ -270,17 +312,56 @@ void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,
         // Solicitud de un nuevo libro
         cantidad_me[libroElegido]--; 
         
-        cout << "¡Prestamo exitoso!" << endl;
-        cout << "Copias restantes de este libro: " << cantidad_me[libroElegido] << endl;
+           cout<<AMARILLO<<"████  ████  █████  ████ █████  ███  █   █  ███     █████ █   █ ███ █████  ███   ████  ███  "<<endl;
+        cout<<"█   █ █   █ █     █       █   █   █ ██ ██ █   █    █      █ █   █    █   █   █ █     █   █ "<<endl;
+        cout<<"████  ████  ████   ███    █   █████ █ █ █ █   █    ████    █    █    █   █   █  ███  █   █"<<endl;
+        cout<<"█     █  █  █         █   █   █   █ █   █ █   █    █      █ █   █    █   █   █     █ █   █ "<<endl; 
+        cout<<"█     █   █ █████ ████    █   █   █ █   █  ███     █████ █   █ ███   █    ███  ████   ███"<<endl;
+        cout<<""<<endl;
+        cout<<""<<endl;
+
+        //Aqui se va atrabajar en la generacion del archivo
+        ofstream archivo; // Objeto para escribir
+    
+    archivo.open("DatosPrestamo.txt", ios::out); // Crear/abrir archivo en modo escritura
+    
+    if (archivo.fail()) {
+        cout << "Error al abrir el archivo" << endl;
+        //return 0;
+    }
+    
+    archivo << "                        --------------------------------------------" << endl;
+    archivo << "                       |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |" << endl;
+    archivo << "                        --------------------------------------------" << endl;
+    archivo << "*****************************  Boleta de registro del Prestamo  **********************" << endl;
+    archivo << "    ╔═══════════════════════════════════════════════════════════════════╗" << endl;
+    archivo << "    ║                      LIBROS DE MEDICINA                           ║" << endl;
+    archivo << "    ╠═════╗═════════════════════════════════════════════════════════════╣" << endl;
+    archivo << "    ║ N°"<<libroElegido<<" ║    Titulo: "<<title_me [libroElegido] <<"           " << endl;
+    archivo << "    ║═════╝    Autor: "<<autor_me [libroElegido]<<"             " << endl;
+    archivo << "    ║          Codigo: "<<codigo_me [libroElegido]<<"                                       ║" << endl;
+    archivo << "    ╚═══════════════════════════════════════════════════════════════════╝" << endl;
+    archivo << "    Nota: Recuerde que para su devolucion debe tener su boleta de registro del pretamo"<<endl;
+    archivo << "          para su devolucion ya que se le pedira el codigo del libro."<<endl;
+
+    archivo.close(); 
+    
+    cout << AMARILLO<<"       ::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;
+    cout << "     Datos escritos correctamente." << endl;
+    cout << "       ::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;
+        cout << endl;
+    cout << VERDE<<"      ++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
+    cout << "    Copias restantes de este libro: " << cantidad_me[libroElegido] << endl;
+    cout << "      ++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
          presti_ME [pos]=true;
     } else {
-        cout << "Lo sentimos, este libro se encuentra AGOTADO por el momento." << endl;
+        cout << ROJO<<"Lo sentimos, este libro se encuentra AGOTADO por el momento." << endl;
     }
 	            break;
 	            
 	            case 4:
-	            
-	            cout << "SALIENDO DE LA SECCION DE PRESTAMOS....."<<endl;
+	            cout <<endl;
+	            cout << AMARILLO<< "SALIENDO DE LA SECCION DE PRESTAMOS....."<<endl;
 	            
 	            break;
 	        }
@@ -289,13 +370,17 @@ void Los_Libros_Prestados(vector<string> &title_prog,vector<string> &autor_prog,
 void Los_Libros_Devolver(vector<string> &title_prog,vector<string> &autor_prog,vector<string> &codigo_prog,vector<int> &cantidad_prog,vector <bool> &ver_IS,
                          vector<string> &title_de,  vector<string> &autor_de,  vector<string> &codigo_de,  vector<int> &cantidad_de  ,vector  <bool> &ver_DE,
                          vector<string> &title_me,  vector<string> &autor_me,  vector<string> &codigo_me,  vector<int> &cantidad_me  ,vector <bool> &ver_ME, int posi){
-		    
-	    cout << "Elija la categoria en la que se encuentra para devolver......."<<endl;
-	    cout<<"1) Programacion "<<endl;
-	    cout<<"2) Derecho"<<endl;
-	    cout<<"3) Medicina"<<endl;
-	    cout<<"4) Salir"<<endl;
-	    int opcion;
+
+    cout <<CYAN<< "     ╔═════════════════════════════════════╗" << endl;
+    cout <<CYAN<< "     ║              CATEGORIAS             ║" << endl;
+    cout <<CYAN<< "     ╠═════════════════════════════════════╣" << endl;
+    cout <<CYAN<< "     ║           1) Programacion           ║" << endl;
+    cout <<CYAN<< "     ║           2) Derecho                ║" << endl;
+    cout <<CYAN<< "     ║           3) Medicina               ║" << endl;
+    cout <<CYAN<< "     ║          *4) Salir                  ║" << endl;
+    cout <<CYAN<< "     ╚═════════════════════════════════════╝" << endl;
+        cout <<AMARILLO<< " Elija Categoria que a devolver elegir: "<<endl;	    
+        int opcion;
 	    string libroCodigo;
         int verificacion = 0;
 		bool bandera = false;
@@ -305,8 +390,8 @@ void Los_Libros_Devolver(vector<string> &title_prog,vector<string> &autor_prog,v
 	        switch (opcion){
 	            
 	            case 1:
-	                cout << "Eligio la categoria de Programacion" << endl;
-                    cout << "Ingrese el codigo del libro" << endl;
+	                cout << AMARILLO<<" <<<<<<<<<<<Eligio la categoria de Programacion >>>>>>>>>>>>" << endl;
+                    cout << VERDE <<"   Ingrese el codigo del libro: ";
                     cin >> libroCodigo;
 		   
                     // Búsqueda secuencial
@@ -319,13 +404,19 @@ void Los_Libros_Devolver(vector<string> &title_prog,vector<string> &autor_prog,v
                     }
 
                     if (bandera == false){
-                        cout << "No Esta registrado en la base de datos o es incorrecto el codigo ingresado......" << endl;            
+                        cout << ROJO<<"No Esta registrado en la base de datos o es incorrecto el codigo ingresado......" << endl;            
                     } else {
-                        cout << "Esta registrado en la base de datos y es correcto" << endl;
-                        cout << "DATOS DEL LIBRO." << endl;
-                        cout << " Nombre: " << title_prog[verificacion] << endl;
-                        cout << " Autor: " << autor_prog[verificacion] << endl;
-                        
+                        cout <<AMARILLO <<"Esta registrado en la base de datos y es correcto" << endl;
+    cout <<CYAN<< "     ╔═════════════════════════════════════╗" << endl;
+    cout <<CYAN<< "     ║           DATOS DEL LIBRO           ║" << endl;
+    cout <<CYAN<< "     ╠═════════════════════════════════════╣" << endl;
+    cout <<CYAN<< "     ║      Nombre: " << title_prog[verificacion] <<"       ║" << endl; 
+    cout <<CYAN<< "     ║      Autor: " << autor_prog[verificacion] <<"        ║" << endl;
+    cout <<CYAN<< "     ║           2) Derecho                ║" << endl;
+    cout <<CYAN<< "     ║           3) Medicina               ║" << endl;
+    cout <<CYAN<< "     ║          *4) Salir                  ║" << endl;
+    cout <<CYAN<< "     ╚═════════════════════════════════════╝" << endl;
+   
                         // Control de Devolución
                         if (ver_IS[posi] == true){
                             cout << "Estado: Prestado" << endl;
@@ -335,6 +426,43 @@ void Los_Libros_Devolver(vector<string> &title_prog,vector<string> &autor_prog,v
                             cin >> desi;
                             
                             if (desi == 1){
+
+
+    cout <<AMARILLO<< " ####     ######   ##  ##   ##  ##   ######   ##       ######   ####             ####     ####    ##  ##           ######   ##  ##   ######   ######   ####  \n";
+    cout << " ## ##    ##       ##  ##   ##  ##   ##       ##         ##    ##  ##            ## ##    ##  ##   ### ##           ##       ##  ##     ##       ##    ##  ## \n";
+    cout << " ##  ##   #####    ##  ##   ##  ##   #####    ##         ##    ##  ##            ##       ##  ##   ######           #####     ####      ##       ##    ##  ## \n";
+    cout << " ##  ##   ##       ##  ##   ##  ##   ##       ##         ##    ##  ##            ##       ##  ##   ######           ##        ####      ##       ##    ##  ## \n";
+    cout << " ## ##    ##        ####    ##  ##   ##       ##         ##    ##  ##            ## ##    ##  ##   ## ###           ##       ##  ##     ##       ##    ##  ## \n";
+    cout << " ####     ######     ##      ######   ######   ######     ##      ####             ####     ####    ##  ##           ######   ##  ##   ######     ##      ####  \n";
+        cout<<""<<endl;
+        cout<<""<<endl;
+
+        //Aqui se va atrabajar en la generacion del archivo
+        ofstream archivo; // Objeto para escribir
+    
+    archivo.open("DatosPrestamo.txt", ios::out); // Crear/abrir archivo en modo escritura
+    
+    if (archivo.fail()) {
+        cout << "Error al abrir el archivo" << endl;
+        //return 0;
+    }
+    
+    archivo << "                        --------------------------------------------" << endl;
+    archivo << "                       |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |" << endl;
+    archivo << "                        --------------------------------------------" << endl;
+    archivo << "*****************************  Boleta de registro de Devolucion  **********************" << endl;
+    archivo << "    ╔═══════════════════════════════════════════════════════════════════╗" << endl;
+    archivo << "    ║                      DATOS DEL LIBRO DEVUELTO                       ║" << endl;
+    archivo << "    ╠═════╗═════════════════════════════════════════════════════════════╣" << endl;
+    archivo << "    ║ N°"<<" ║    Titulo: "<<title_prog[verificacion] <<"           " << endl;
+    archivo << "    ║═════╝    Autor: "<<autor_prog[verificacion]<<"             " << endl;
+    archivo << "    ║          Codigo: "<<codigo_prog[verificacion]<<"                                       ║" << endl;
+    archivo << "    ╚═══════════════════════════════════════════════════════════════════╝" << endl;
+
+    archivo.close(); 
+    
+    cout << "Datos escritos correctamente." << endl;
+
                                 cout << "Libro devuelto exitosamente" << endl;
                                 cantidad_prog[verificacion]++;	 
                                 ver_IS[posi] = false;
@@ -381,7 +509,41 @@ void Los_Libros_Devolver(vector<string> &title_prog,vector<string> &autor_prog,v
                             cin >> desi;
                             
                             if (desi == 1){
-                                cout << "Libro devuelto exitosamente" << endl;
+                             cout <<AMARILLO<< " ####     ######   ##  ##   ##  ##   ######   ##       ######   ####             ####     ####    ##  ##           ######   ##  ##   ######   ######   ####  \n";
+    cout << " ## ##    ##       ##  ##   ##  ##   ##       ##         ##    ##  ##            ## ##    ##  ##   ### ##           ##       ##  ##     ##       ##    ##  ## \n";
+    cout << " ##  ##   #####    ##  ##   ##  ##   #####    ##         ##    ##  ##            ##       ##  ##   ######           #####     ####      ##       ##    ##  ## \n";
+    cout << " ##  ##   ##       ##  ##   ##  ##   ##       ##         ##    ##  ##            ##       ##  ##   ######           ##        ####      ##       ##    ##  ## \n";
+    cout << " ## ##    ##        ####    ##  ##   ##       ##         ##    ##  ##            ## ##    ##  ##   ## ###           ##       ##  ##     ##       ##    ##  ## \n";
+    cout << " ####     ######     ##      ######   ######   ######     ##      ####             ####     ####    ##  ##           ######   ##  ##   ######     ##      ####  \n";
+        cout<<""<<endl;
+        cout<<""<<endl;
+
+        //Aqui se va atrabajar en la generacion del archivo
+        ofstream archivo; // Objeto para escribir
+    
+    archivo.open("DatosPrestamo.txt", ios::out); // Crear/abrir archivo en modo escritura
+    
+    if (archivo.fail()) {
+        cout << "Error al abrir el archivo" << endl;
+        //return 0;
+    }
+    
+    archivo << "                        --------------------------------------------" << endl;
+    archivo << "                       |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |" << endl;
+    archivo << "                        --------------------------------------------" << endl;
+    archivo << "*****************************  Boleta de registro de Devolucion  **********************" << endl;
+    archivo << "    ╔═══════════════════════════════════════════════════════════════════╗" << endl;
+    archivo << "    ║                      DATOS DEL LIBRO DEVUELTO                       ║" << endl;
+    archivo << "    ╠═══════════════════════════════════════════════════════════════════╣" << endl;
+    archivo << "    ║           Titulo: "<<title_de[verificacion] <<"           " << endl;
+    archivo << "    ║          Autor: "<<autor_de[verificacion]<<"             " << endl;
+    archivo << "    ║          Codigo: "<<codigo_de[verificacion]<<"                                       ║" << endl;
+    archivo << "    ╚═══════════════════════════════════════════════════════════════════╝" << endl;
+
+    archivo.close(); 
+    
+    cout << "Datos escritos correctamente." << endl;
+
                                 cantidad_de[verificacion]++;	 
                                 ver_DE[posi] = false; 
                             } else if (desi == 2){
@@ -396,7 +558,7 @@ void Los_Libros_Devolver(vector<string> &title_prog,vector<string> &autor_prog,v
 	                break;
 
 	            case 3:
-	                cout << "Eligio la categotia de Medicina" << endl;
+	                cout << "Eligio la categoria de Medicina" << endl;
                     cout << "Ingrese el codigo del libro" << endl;
                     cin >> libroCodigo;
 		    
@@ -426,7 +588,45 @@ void Los_Libros_Devolver(vector<string> &title_prog,vector<string> &autor_prog,v
                             cin >> desi;
                             
                             if (desi == 1){
-                                cout << "Libro devuelto exitosamente" << endl;
+                                  cout <<AMARILLO<< " ####     ######   ##  ##   ##  ##   ######   ##       ######   ####             ####     ####    ##  ##           ######   ##  ##   ######   ######   ####  \n";
+    cout << " ## ##    ##       ##  ##   ##  ##   ##       ##         ##    ##  ##            ## ##    ##  ##   ### ##           ##       ##  ##     ##       ##    ##  ## \n";
+    cout << " ##  ##   #####    ##  ##   ##  ##   #####    ##         ##    ##  ##            ##       ##  ##   ######           #####     ####      ##       ##    ##  ## \n";
+    cout << " ##  ##   ##       ##  ##   ##  ##   ##       ##         ##    ##  ##            ##       ##  ##   ######           ##        ####      ##       ##    ##  ## \n";
+    cout << " ## ##    ##        ####    ##  ##   ##       ##         ##    ##  ##            ## ##    ##  ##   ## ###           ##       ##  ##     ##       ##    ##  ## \n";
+    cout << " ####     ######     ##      ######   ######   ######     ##      ####             ####     ####    ##  ##           ######   ##  ##   ######     ##      ####  \n";
+        cout<<""<<endl;
+        cout<<""<<endl;
+
+        //Aqui se va atrabajar en la generacion del archivo
+        ofstream archivo; // Objeto para escribir
+    
+    archivo.open("DatosPrestamo.txt", ios::out); // Crear/abrir archivo en modo escritura
+    
+    if (archivo.fail()) {
+        cout << "Error al abrir el archivo" << endl;
+        //return 0;
+    }
+    
+    archivo << "                        --------------------------------------------" << endl;
+    archivo << "                       |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |" << endl;
+    archivo << "                        --------------------------------------------" << endl;
+    archivo << "*****************************  Boleta de registro de Devolucion  **********************" << endl;
+    archivo << "    ╔═══════════════════════════════════════════════════════════════════╗" << endl;
+    archivo << "    ║                      DATOS DEL LIBRO DEVUELTO                       ║" << endl;
+    archivo << "    ╠═══════════════════════════════════════════════════════════════════╣" << endl;
+    archivo << "    ║          Titulo: "<<title_me[verificacion] <<"           " << endl;
+    archivo << "    ║          Autor: "<<autor_me[verificacion]<<"             " << endl;
+    archivo << "    ║          Codigo: "<<codigo_me[verificacion]<<"                                       ║" << endl;
+    archivo << "    ║          Estado del Usuario: NO DEBE                              ║" << endl;
+    archivo << "    ╚═══════════════════════════════════════════════════════════════════╝" << endl;
+    archivo << "        NOTA: Gracias por devolver el libro......... :)"<<endl;
+    archivo << "    ====================================================================="<<endl;
+    archivo << "                        © 2026 Biblioteca UPDS"<<endl;
+    archivo << "    ====================================================================="<<endl;
+    archivo.close(); 
+    
+    cout << "Datos escritos correctamente." << endl;
+
                                 cantidad_me[verificacion]++;	 
                                 ver_ME[posi] = false; 
                             } else if (desi == 2){
@@ -445,14 +645,6 @@ void Los_Libros_Devolver(vector<string> &title_prog,vector<string> &autor_prog,v
 	                break;
 	        }
 	    }
-
-
-
-
-
-
-
-
 
 void Los_Libros_Donar(vector<string> &title_sis, vector<string> &aut_sis, vector<int> &cant_sis,vector<string> &cod_sis,
 					  vector<string> &title_de,  vector<string> &aut_de,  vector<int> &cant_de, vector<string> &cod_de,
@@ -554,14 +746,14 @@ void Los_Libros_Donar(vector<string> &title_sis, vector<string> &aut_sis, vector
  do{
  
     system("chcp 65001 > nul"); 
-    cout << "╔═════════════════════════════════════╗" << endl; 
-    cout << "║      UNIVERSIDAD DOMINGO SAVIO      ║" << endl; 
-    cout << "╠═════════════════════════════════════╣" << endl;
-    cout << "║  1) Iniciar Sesion                  ║" << endl;
-    cout << "║  2) Usuario Nuevo                   ║" << endl;
-    cout << "║  3) Cerrar Sistema de manera segura ║" << endl;
-    cout << "╚═════════════════════════════════════╝" << endl; 
-  
+    cout <<VERDE<< "             ╔═════════════════════════════════════╗" << endl; 
+    cout << "             ║      UNIVERSIDAD DOMINGO SAVIO      ║" << endl; 
+    cout << "             ╠═════════════════════════════════════╣" << endl;
+    cout << "             ║  1) Iniciar Sesion                  ║" << endl;
+    cout << "             ║  2) Usuario Nuevo                   ║" << endl;
+    cout << "             ║  3) Cerrar Sistema de manera segura ║" << endl;
+    cout << "             ╚═════════════════════════════════════╝" << endl; 
+   
 	   int posicion = 0;
 
 	cin>>opp;    
@@ -572,7 +764,6 @@ void Los_Libros_Donar(vector<string> &title_sis, vector<string> &aut_sis, vector
          cin.ignore();
             int i=0;
             int intentos=3;
-            //int verificaion_ID=0;
             bool ver=false;
             do{
             cout << " Ingrese su contraseña de estudiante para iniciar sesion: ";
@@ -598,14 +789,14 @@ void Los_Libros_Donar(vector<string> &title_sis, vector<string> &aut_sis, vector
             if (ver==false){
              
                 cout << "Intentelo mas tarde........."<<endl;    
-                
+                continue;
             }else if(ver == true){
                 cout << estudiantes[posicion]<<endl;
-            cout << carreras[posicion]<<endl;
+               cout << carreras[posicion]<<endl;
                 cout << "Esta registrado en la base de datos"<<endl;
-				//return posicion;
+			
             }
-                
+
 	}else if(opp==2){
 	cin.ignore();
 	//Usuario nuevo
@@ -632,11 +823,11 @@ void Los_Libros_Donar(vector<string> &title_sis, vector<string> &aut_sis, vector
 
                 if (contra.size()!= 7) {
 
-                    cout <<"No cumple con el requisito"<<endl;
+                    cout <<ROJO<<"No cumple con el requisito"<<endl;
 
                 } else if (contra.size()==7){
 
-                    cout << "\nCUMPLE CON EL REQUISITO DE 7 CARACTERES"<<endl;
+                    cout << AMARILLO<<"\nCUMPLE CON EL REQUISITO DE 7 CARACTERES"<<endl;
                 
                     for (size_t i = 0; i < contrasena.size(); i++)
                     {
@@ -647,26 +838,26 @@ void Los_Libros_Donar(vector<string> &title_sis, vector<string> &aut_sis, vector
                 
                     if(comprobar ==true){
                         contrasena.push_back(contra);
-                        cout<<"La contrasena se guardo correctamente"<<endl;
+                        cout<<VERDE<<"La contrasena se guardo correctamente"<<endl;
                         break;
                     } else {
-                        cout << "Error: Esa contraseña ya existe. Intente otra." << endl;
+                        cout <<ROJO<< "Error: Esa contraseña ya existe. Intente otra." << endl;
                         comprobar = true;
                     }
                 }
                 } while (comprobar== true);
                 
                  posicion = estudiantes.size() - 1;
-            cout<< "\nLos datos se guardaron exitosamente "<<endl;
+            cout<< VERDE<<"\nLos datos se guardaron exitosamente "<<endl;
             
 }else if (opp==3){
-    cout << "SOLO PARA PERSONAL AUTORIZADO"<<endl;
+    cout << ROJO<<"SOLO PARA PERSONAL AUTORIZADO"<<endl;
 // AQUI SE INGRESAR LA CONTRASEÑA QUE ES:admin123456 
             int i=0;
             int intentos=3;
            
             do{
-            cout << " Ingrese la contrasena: ";
+            cout <<AMARILLO<< " Ingrese la contrasena: ";
             cin >> administracion;
             intentos--;    
             
@@ -680,13 +871,13 @@ void Los_Libros_Donar(vector<string> &title_sis, vector<string> &aut_sis, vector
             }
             }while (intentos>i);
             if (sis==false){
-                    cout<<"CONTRASEÑA INCORRECTA, CANCELANDO APAGADO SEGURO DEL PROGRAMA"<<endl;
+                    cout<<ROJO<<"CONTRASEÑA INCORRECTA, CANCELANDO APAGADO SEGURO DEL PROGRAMA"<<endl;
                     cin.ignore();
-                    cout << " PRESIONE ENTER POR FAVOR PARA REGRESAR AL MENU PRINCIPAL";
+                    cout <<VERDE <<" PRESIONE ENTER POR FAVOR PARA REGRESAR AL MENU PRINCIPAL";
                     cin.get();
             }if (sis == true ){
-				 cout << "TODOS LOS DERECHOS RESERVADOS UNIVERSIDAD PRIVADA DOMINGO SAVIO"<<endl;
-                  // R"(...) permite escribir texto multilínea tal cual, sin escapar caracteres
+				 cout <<AZUL<< "TODOS LOS DERECHOS RESERVADOS UNIVERSIDAD PRIVADA DOMINGO SAVIO"<<endl;
+        
 		   cout<<AZUL;
     string arte_ascii = R"(                                                             
                                                  .....                                              
@@ -740,17 +931,17 @@ void Los_Libros_Donar(vector<string> &title_sis, vector<string> &aut_sis, vector
 			}
 } 
 
-		cout<<"\nBienvenido "<<estudiantes[posicion]<<".............."<<endl;
+		cout<<AMARILLO<<"\nBienvenido "<<VERDE<<estudiantes[posicion]<<AMARILLO<<".............."<<endl;
 		cout <<"Que deseas relizar ?......"<<endl;
 		system("chcp 65001 > nul");
-    cout << "╔═════════════════════════════════════╗" << endl; 
+    cout <<CYAN<< "╔═════════════════════════════════════╗" << endl; 
     cout << "║          MENU PRINCIPAL             ║" << endl; 
     cout << "╠═════════════════════════════════════╣" << endl;
     cout << "║  1) Prestar Libro                   ║" << endl;
     cout << "║  2) Devolver Libro                  ║" << endl;
     cout << "║  3) Donar Libro                     ║" << endl;
     cout << "╚═════════════════════════════════════╝" << endl;
-		cout <<"Elija opcion: ";
+		cout <<AMARILLO<<"Elija opcion: ";
 		int opciones;
         cin>>opciones;
 		switch (opciones){
