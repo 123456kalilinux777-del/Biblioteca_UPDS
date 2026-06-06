@@ -1,16 +1,13 @@
                         --------------------------------------------
                        |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |
                         --------------------------------------------
-*****************************  Boleta de registro de Devolucion  **********************
+*****************************  Boleta de registro del Prestamo  **********************
     ╔═══════════════════════════════════════════════════════════════════╗
-    ║                      DATOS DEL LIBRO DEVUELTO                       ║
-    ╠═══════════════════════════════════════════════════════════════════╣
-    ║          Titulo: anatomia humana           
-    ║          Autor: Henri Rouvière             
-    ║          Codigo: 9788445818                                       ║
-    ║          Estado del Usuario: NO DEBE                              ║
+    ║                      LIBROS DE MEDICINA                           ║
+    ╠═════╗═════════════════════════════════════════════════════════════╣
+    ║ N°5 ║    Titulo: sangre de campeon           
+    ║═════╝    Autor: carlos cautemoc sanchez             
+    ║          Codigo: 1111111111111                                       ║
     ╚═══════════════════════════════════════════════════════════════════╝
-        NOTA: Gracias por devolver el libro......... :)
-    =====================================================================
-                        © 2026 Biblioteca UPDS
-    =====================================================================
+    Nota: Recuerde que para su devolucion debe tener su boleta de registro del pretamo
+          para su devolucion ya que se le pedira el codigo del libro.
