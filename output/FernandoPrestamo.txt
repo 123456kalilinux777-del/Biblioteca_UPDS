@@ -1,0 +1,20 @@
+                        --------------------------------------------
+                       |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |
+                        --------------------------------------------
+*****************************  Boleta de registro del Prestamo  **********************
+    ╔═══════════════════════════════════════════════════════════════════╗
+    ║                            DATOS DEl LIBRO                        ║
+    ╠═════╗═════════════════════════════════════════════════════════════╣
+    ║ N°3 ║    Titulo: Elprogramador pragmatico           
+    ║═════╝    Autor: Andrew Hunt & David Thomas             
+    ║          Codigo: 9788412053111                                       ║
+    ╚═══════════════════════════════════════════════════════════════════╝
+    ╔═══════════════════════════════════════════════════════════════════╗
+    ║                  DATOS DEl USUARIO SOLICITANTE                    ║
+    ╠═════╗═════════════════════════════════════════════════════════════╣
+    ║ N°3 ║    Titulo: Fernando           
+    ║═════╝    Autor: Administracion de Empresas             
+    ║          Codigo: 12931718                                       ║
+    ╚═══════════════════════════════════════════════════════════════════╝
+    Nota: Recuerde que para su devolucion debe tener su boleta de registro del pretamo
+          para su devolucion ya que se le pedira el codigo del libro.

@@ -1,0 +1,13 @@
+                        --------------------------------------------
+                       |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |
+                        --------------------------------------------
+*****************************  Boleta de registro del Prestamo  **********************
+    ╔═══════════════════════════════════════════════════════════════════╗
+    ║                      LIBROS DE MEDICINA                           ║
+    ╠═════╗═════════════════════════════════════════════════════════════╣
+    ║ N°2 ║    Titulo: inteligencia artificial y medicina           
+    ║═════╝    Autor: Antonio Sousa Poza             
+    ║          Codigo: 9783030412                                       ║
+    ╚═══════════════════════════════════════════════════════════════════╝
+    Nota: Recuerde que para su devolucion debe tener su boleta de registro del prestamo
+          ya que se le pedira el codigo del libro.

@@ -1,13 +1,13 @@
                          --------------------------------------------
                         |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |
                          --------------------------------------------
- *****************************  Boleta de registro de Devolucion  **********************
+   *****************************  Boleta de Registro  **********************
      ╔═══════════════════════════════════════════════════════════════════╗
      ║                      DATOS DEL LIBRO DONADO                       ║
      ╠═══════════════════════════════════════════════════════════════════╣
-     ║          Titulo: codigo limpio           
-     ║          Autor: Robert C. Martin             
-     ║          Codigo: 9788441532222                                       ║
+     ║          Titulo: SANGRE DE CAMPEON           
+     ║          Autor: CARLOS CAUTEMOC             
+     ║          Codigo: 1234567890                                      ║
      ║          Estado del Usuario: NO DEBE                              ║
      ╚═══════════════════════════════════════════════════════════════════╝
     ╔═══════════════════════════════════════════════════════════════════╗
@@ -15,7 +15,7 @@
     ╠═════╗═════════════════════════════════════════════════════════════╣
     ║ N° ║    Titulo: Felipe           
     ║═════╝    Autor: Derecho             
-    ║          Codigo: 12931318                                       ║
+    ║          Codigo: 12931318                                        ║
     ╚═══════════════════════════════════════════════════════════════════╝
          NOTA: Gracias por donar este libro, usted colabora bastante a la comunidad lectora la biblioteca UPDS
                 esta muy agradecido por su aporte......... :)

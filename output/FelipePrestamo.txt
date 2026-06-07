@@ -1,0 +1,20 @@
+[32m                        --------------------------------------------
+                           |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |
+                        --------------------------------------------
+    *****************************  Boleta de registro del Prestamo  **********************
+         ╔═══════════════════════════════════════════════════════════════════╗
+         ║                      LIBROS DE PROGRAMACION                       ║
+         ╠═════╗═════════════════════════════════════════════════════════════╣
+         ║ N°3 ║    Titulo: derecho penal boliviano           
+         ║═════╝    Autor: Benjamín Miguel Harb             
+         ║          Codigo: 9789990503548                                       ║
+         ╚═══════════════════════════════════════════════════════════════════╝
+    ╔═══════════════════════════════════════════════════════════════════╗
+    ║                  DATOS DEl USUARIO SOLICITANTE                    ║
+    ╠═════╗═════════════════════════════════════════════════════════════╣
+    ║ N°3 ║    Titulo: Felipe           
+    ║═════╝    Autor: Derecho             
+    ║          Codigo: 12931318                                       ║
+    ╚═══════════════════════════════════════════════════════════════════╝
+    Nota: Recuerde que para su devolucion debe tener su boleta de registro del pretamo
+          para su devolucion ya que se le pedira el codigo del libro.

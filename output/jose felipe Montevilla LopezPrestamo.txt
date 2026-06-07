@@ -1,0 +1,20 @@
+                        --------------------------------------------
+                       |    BIBLIOTECA UNIVERSIDAD DOMINGO SAVIO    |
+                        --------------------------------------------
+*****************************  Boleta de registro del Prestamo  **********************
+    ╔═══════════════════════════════════════════════════════════════════╗
+    ║                            DATOS DEl LIBRO                        ║
+    ╠═════╗═════════════════════════════════════════════════════════════╣
+    ║ N°1 ║    Titulo: python al descubierto           
+    ║═════╝    Autor: Arturo Fernández Montoro             
+    ║          Codigo: 9788493945046                                       ║
+    ╚═══════════════════════════════════════════════════════════════════╝
+    ╔═══════════════════════════════════════════════════════════════════╗
+    ║                  DATOS DEl USUARIO SOLICITANTE                    ║
+    ╠═════╗═════════════════════════════════════════════════════════════╣
+    ║ N°1 ║    Titulo: jose felipe Montevilla Lopez           
+    ║═════╝    Autor: sis             
+    ║          Codigo: 12931316                                       ║
+    ╚═══════════════════════════════════════════════════════════════════╝
+    Nota: Recuerde que para su devolucion debe tener su boleta de registro del pretamo
+          para su devolucion ya que se le pedira el codigo del libro.
